@@ -1,0 +1,65 @@
+[gd_scene load_steps=7 format=3 uid="uid://1jxtpc55ndu2"]
+
+[ext_resource type="FontFile" uid="uid://u3tjmtmiqcqo" path="res://assets/fonts/green_leaf/Green Leaf.otf" id="1_k04i4"]
+[ext_resource type="PackedScene" uid="uid://b0d7xv4mygltp" path="res://scenes/level_select_button.tscn" id="2_hlb6t"]
+[ext_resource type="Texture2D" uid="uid://mffqlogke5hl" path="res://assets/sprites/Icon-SP.png" id="3_ahrjq"]
+[ext_resource type="Texture2D" uid="uid://d01iqnebc5omh" path="res://assets/sprites/Icon-SU.png" id="4_5pvln"]
+[ext_resource type="Texture2D" uid="uid://5yyc11ha6d8" path="res://assets/sprites/Icon-FA.png" id="5_xdblq"]
+[ext_resource type="Texture2D" uid="uid://cvjsanb1pbiuf" path="res://assets/sprites/Icon-WI.png" id="6_vi1bp"]
+
+[node name="levelSelectionMenu" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1158.0
+offset_bottom = 657.0
+mouse_filter = 1
+
+[node name="menuTitle" type="Label" parent="."]
+offset_top = 2.0
+offset_right = 1150.0
+offset_bottom = 222.0
+theme_override_fonts/font = ExtResource("1_k04i4")
+theme_override_font_sizes/font_size = 170
+text = "Change of Seasons"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+offset_left = -7.0000134
+offset_top = 253.0
+offset_right = 1305.0
+offset_bottom = 552.0
+scale = Vector2(0.9, 0.9)
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 0
+columns = 4
+
+[node name="level0SelectButton" parent="CenterContainer/GridContainer" instance=ExtResource("2_hlb6t")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+icon = ExtResource("3_ahrjq")
+
+[node name="level1SelectButton" parent="CenterContainer/GridContainer" instance=ExtResource("2_hlb6t")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+icon = ExtResource("4_5pvln")
+
+[node name="level2SelectButton" parent="CenterContainer/GridContainer" instance=ExtResource("2_hlb6t")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+icon = ExtResource("5_xdblq")
+
+[node name="level3SelectButton" parent="CenterContainer/GridContainer" instance=ExtResource("2_hlb6t")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+icon = ExtResource("6_vi1bp")

@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://4rdi1vkrs0l0"]
+[gd_scene load_steps=8 format=3 uid="uid://4rdi1vkrs0l0"]
 
+[ext_resource type="Script" uid="uid://dnb2y80n27t0f" path="res://scenes/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://b2boym03cgsdu" path="res://assets/backgrounds/LeafGame Menu.png" id="1_ekxnf"]
 [ext_resource type="FontFile" uid="uid://u3tjmtmiqcqo" path="res://assets/fonts/green_leaf/Green Leaf.otf" id="1_l6cm7"]
 
@@ -48,6 +49,7 @@ corner_radius_bottom_left = 18
 [node name="mainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_bqqt6")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
@@ -85,3 +87,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ekxnf")
 theme_override_styles/hover = SubResource("StyleBoxFlat_l6cm7")
 text = "start falling"
+
+[node name="LevelSelectionContainer" type="CanvasLayer" parent="."]
+
+[connection signal="pressed" from="startButton" to="." method="_on_start_button_pressed"]
