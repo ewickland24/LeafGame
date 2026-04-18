@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://b54iwlmrg3gd8" path="res://scenes/daLeafCharacter.tscn" id="2_mmojm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mmojm"]
+size = Vector2(30.800001, 125)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_iuu36"]
 animations = [{
@@ -18,14 +19,17 @@ animations = [{
 
 [node name="GameManager" type="Node2D"]
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_mmojm")]
+position = Vector2(-1743, -2831)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-scale = Vector2(1000, 1)
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(15000, 0)
+scale = Vector2(10, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+scale = Vector2(100, 1)
 shape = SubResource("RectangleShape2D_mmojm")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D/CollisionShape2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D/CollisionShape2D"]
+scale = Vector2(0.25, 1)
 sprite_frames = SubResource("SpriteFrames_iuu36")
-
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_mmojm")]
-position = Vector2(0, -664)
