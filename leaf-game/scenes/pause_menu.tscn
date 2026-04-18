@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://dggwy7x3xx8j2"]
 
-[ext_resource type="Script" uid="uid://boghblesesy2j" path="res://scenes/pause_menu.gd" id="1_kukqi"]
+[ext_resource type="Script" uid="uid://boghblesesy2j" path="res://scripts/pause_menu.gd" id="1_kukqi"]
 [ext_resource type="Shader" path="res://scenes/pause_menu.gdshader" id="1_myx47"]
 [ext_resource type="FontFile" uid="uid://u3tjmtmiqcqo" path="res://assets/fonts/green_leaf/Green Leaf.otf" id="1_n87rw"]
 [ext_resource type="Texture2D" uid="uid://brlufuhqec2l8" path="res://assets/sprites/MapleFrame.png" id="4_5d2l8"]
@@ -189,6 +189,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("1_kukqi")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -203,6 +204,7 @@ offset_right = 5.0
 offset_bottom = -6.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 color = Color(0, 0, 0, 1)
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
@@ -219,6 +221,7 @@ offset_right = 113.0
 offset_bottom = 124.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_kukqi")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
@@ -229,6 +232,7 @@ alignment = 1
 [node name="resumeButton" type="Button" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
+mouse_filter = 1
 theme_override_fonts/font = ExtResource("1_n87rw")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_n87rw")
@@ -239,6 +243,7 @@ text = "resume"
 [node name="restartButton" type="Button" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
+mouse_filter = 1
 theme_override_fonts/font = ExtResource("1_n87rw")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_n87rw")
@@ -249,6 +254,7 @@ text = "restart"
 [node name="quitButton" type="Button" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
+mouse_filter = 1
 theme_override_fonts/font = ExtResource("1_n87rw")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_n87rw")

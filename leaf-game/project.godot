@@ -18,6 +18,7 @@ config/icon="res://assets/sprites/icon.svg"
 [autoload]
 
 GlobalTwigCursor="*res://GlobalTwigCursor.gd"
+GlobalLevelManager="*res://GlobalLevelManager.gd"
 
 [display]
 
