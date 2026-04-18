@@ -1,15 +1,16 @@
 extends Node2D
-@onready var daLeaf = $CharacterBody2D
+@onready var daLeaf = $CharacterBody2D/leafPhysics
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	daLeaf.loadingLeaf(GlobalLevelManager.current_level)
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-#	if (daLeaf.position.x >= 6000):
+	if (daLeaf.position.x >= 9000):
 		print("i wins")
 		# updates the level selection menu with what is unlocked based on
 		# if you won the last level
@@ -20,5 +21,5 @@ func _process(delta):
 			return
 		get_tree().call_deferred("change_scene_to_file", level_to_load)
 	
-#	if (daLeaf.is_on_floor() == true):
+	#if (daLeaf.is_on_floor() == true):
 		print("oh no!")
