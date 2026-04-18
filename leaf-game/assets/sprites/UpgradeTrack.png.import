@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bw0it1bndkorm"
-path="res://.godot/imported/Pollen.png-2a598325e3537d5adf46e05c59827631.ctex"
+uid="uid://bnmre1jcbacct"
+path="res://.godot/imported/UpgradeTrack.png-55a50eeb8ad1c30be3d33e403e6be2dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Pollen.png"
-dest_files=["res://.godot/imported/Pollen.png-2a598325e3537d5adf46e05c59827631.ctex"]
+source_file="res://assets/sprites/UpgradeTrack.png"
+dest_files=["res://.godot/imported/UpgradeTrack.png-55a50eeb8ad1c30be3d33e403e6be2dd.ctex"]
 
 [params]
 

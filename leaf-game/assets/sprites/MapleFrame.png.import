@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2msdyb7m30j2"
-path="res://.godot/imported/Bush.png-7607687d283ba538a69e2a4ce4ce68a9.ctex"
+uid="uid://brlufuhqec2l8"
+path="res://.godot/imported/MapleFrame.png-e1670bd4099bfecc7a63d7c6637e087d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Bush.png"
-dest_files=["res://.godot/imported/Bush.png-7607687d283ba538a69e2a4ce4ce68a9.ctex"]
+source_file="res://assets/sprites/MapleFrame.png"
+dest_files=["res://.godot/imported/MapleFrame.png-e1670bd4099bfecc7a63d7c6637e087d.ctex"]
 
 [params]
 

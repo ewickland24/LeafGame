@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnmre1jcbacct"
-path="res://.godot/imported/UpgradeTrack.png-cf260ba8ebf428ee1ef4faaefb6b278d.ctex"
+uid="uid://c2msdyb7m30j2"
+path="res://.godot/imported/Bush.png-e656e6d32562974e82509a8131315473.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/UpgradeTrack.png"
-dest_files=["res://.godot/imported/UpgradeTrack.png-cf260ba8ebf428ee1ef4faaefb6b278d.ctex"]
+source_file="res://assets/sprites/Bush.png"
+dest_files=["res://.godot/imported/Bush.png-e656e6d32562974e82509a8131315473.ctex"]
 
 [params]
 

@@ -55,6 +55,19 @@ offset_right = 1155.0
 offset_bottom = 647.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_bqqt6")
 
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 399.0
+offset_top = 222.0
+offset_right = 779.0
+offset_bottom = 330.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 120
+text = "Leaf Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="startButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 5
@@ -72,16 +85,3 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ekxnf")
 theme_override_styles/hover = SubResource("StyleBoxFlat_l6cm7")
 text = "start"
-
-[node name="Title" type="Label" parent="."]
-layout_mode = 0
-offset_left = 399.0
-offset_top = 222.0
-offset_right = 779.0
-offset_bottom = 330.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_l6cm7")
-theme_override_font_sizes/font_size = 120
-text = "Leaf Game"
-horizontal_alignment = 1
-vertical_alignment = 1

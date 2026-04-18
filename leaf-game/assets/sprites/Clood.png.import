@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://h02okjq1h1st"
-path="res://.godot/imported/LeafChar.png-1e66d8f1f64791dfa54dd7818f265464.ctex"
+uid="uid://cqi7581wcjc05"
+path="res://.godot/imported/Clood.png-798d256b45086ef1af872c063bf627a9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/LeafChar.png"
-dest_files=["res://.godot/imported/LeafChar.png-1e66d8f1f64791dfa54dd7818f265464.ctex"]
+source_file="res://assets/sprites/Clood.png"
+dest_files=["res://.godot/imported/Clood.png-798d256b45086ef1af872c063bf627a9.ctex"]
 
 [params]
 
