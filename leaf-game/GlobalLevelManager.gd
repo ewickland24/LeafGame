@@ -1,6 +1,6 @@
 extends Node
 
-var current_level: int = 3
+var current_level: int = 0
 var level_unlocked: int = 0
 var max_level: int = 4
 
