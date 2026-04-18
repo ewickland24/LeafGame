@@ -66,7 +66,7 @@ func _physics_process(delta):
 	if (Input.is_action_pressed("breeze") && totalBreeze > 0 && rotation != 0.0):
 		totalBreeze -= 0.1
 		breezeBox.scale.x = 10 * (totalBreeze/maxBreeze)
-		breezeBox.position.x -= 3.3
+		breezeBox.position.x -= 2.9 + enviornment * enviornment
 		velocity.x += 3 * cos(rotation)
 		velocity.y -= 10.0 * abs(sin(rotation))
 		loft -= 0.05
@@ -148,8 +148,8 @@ func loadingLeaf(numba):
 		daDrafts[1].visible = false
 	elif(enviornment == 3):
 		draftNum = 0
-		totalBreeze = 5.0
-		maxBreeze = 5.0
+		totalBreeze = 7.0
+		maxBreeze = 7.0
 		gravityTax = 2
 		Y_MAX_SPEED = 800
 		X_MAX_SPEED = 1200
