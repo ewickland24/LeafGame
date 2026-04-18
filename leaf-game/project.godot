@@ -11,5 +11,6 @@ config_version=5
 [application]
 
 config/name="LeafGame"
+run/main_scene="uid://3fjpmlygo14h"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://sprites/icon.svg"
