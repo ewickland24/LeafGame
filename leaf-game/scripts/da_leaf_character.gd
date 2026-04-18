@@ -10,6 +10,9 @@ var leafFlow : float = 0.0
 var inputSettings : int = 1
 var gameOver : bool = false
 
+
+#func
+
 func _physics_process(delta):
 	
 	# swap from keys to mouse controlls

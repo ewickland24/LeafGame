@@ -1,21 +1,73 @@
-[gd_scene load_steps=5 format=3 uid="uid://b54iwlmrg3gd8"]
+[gd_scene load_steps=10 format=3 uid="uid://b54iwlmrg3gd8"]
 
 [ext_resource type="Script" uid="uid://clqr5hxi0lrk8" path="res://scripts/da_leaf_character.gd" id="1_gs0hc"]
-[ext_resource type="Texture2D" uid="uid://bcyij48jjm3f7" path="res://sprites/icon.svg" id="1_yf8w5"]
+[ext_resource type="Texture2D" uid="uid://h02okjq1h1st" path="res://assets/sprites/LeafChar.png" id="2_gs0hc"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1v5px"]
-radius = 3.0
-height = 32.0
+radius = 4.9
+height = 43.5
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_gs0hc"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_gs0hc"]
+atlas = ExtResource("2_gs0hc")
+region = Rect2(3, 0, 136, 127)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hjfg7"]
+atlas = ExtResource("2_gs0hc")
+region = Rect2(143, 0, 136, 127)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fpd4g"]
+atlas = ExtResource("2_gs0hc")
+region = Rect2(284, 0, 136, 127)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hhnnx"]
+atlas = ExtResource("2_gs0hc")
+region = Rect2(3, 130, 136, 127)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kusi1"]
+atlas = ExtResource("2_gs0hc")
+region = Rect2(143, 130, 136, 127)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kqe7v"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_yf8w5")
+"texture": SubResource("AtlasTexture_gs0hc")
 }],
-"loop": true,
-"name": &"default",
-"speed": 5.0
+"loop": false,
+"name": &"leaf1",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hjfg7")
+}],
+"loop": false,
+"name": &"leaf2",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fpd4g")
+}],
+"loop": false,
+"name": &"leaf3",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hhnnx")
+}],
+"loop": false,
+"name": &"leaf4",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kusi1")
+}],
+"loop": false,
+"name": &"leaf5",
+"speed": 0.0
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
@@ -26,10 +78,19 @@ rotation = 1.5707964
 scale = Vector2(10, 4)
 shape = SubResource("CapsuleShape2D_1v5px")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D"]
-rotation = -1.5707964
-scale = Vector2(0.25, 0.05)
-sprite_frames = SubResource("SpriteFrames_gs0hc")
-
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.3, 0.3)
+limit_left = -5950
+limit_top = -1600
+limit_right = 6000
+limit_bottom = 1615
+position_smoothing_enabled = true
+metadata/_edit_lock_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(3.0553354e-05, -20.999996)
+rotation = -0.61086524
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_kqe7v")
+animation = &"leaf1"
+metadata/_edit_lock_ = true
