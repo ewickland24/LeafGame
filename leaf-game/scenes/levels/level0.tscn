@@ -1,0 +1,142 @@
+[gd_scene load_steps=20 format=3 uid="uid://c6fcafsawdn8t"]
+
+[ext_resource type="Script" path="res://scenes/level.gd" id="1_ry65h"]
+[ext_resource type="Texture2D" uid="uid://bg4rwuchtkmjg" path="res://assets/backgrounds/Level-Spring.png" id="2_d0grl"]
+[ext_resource type="Texture2D" uid="uid://bqfdpioiqei8v" path="res://assets/sprites/Home.png" id="3_1nvli"]
+[ext_resource type="Texture2D" uid="uid://c7b6jrgswu5uf" path="res://assets/sprites/Tree.png" id="4_vals0"]
+[ext_resource type="PackedScene" uid="uid://b54iwlmrg3gd8" path="res://scenes/daLeafCharacter.tscn" id="5_oem7y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hp1nw"]
+atlas = ExtResource("2_d0grl")
+region = Rect2(0, 0, 3840, 1080)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_40rbg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hp1nw")
+}],
+"loop": false,
+"name": &"spring",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1hnif"]
+atlas = ExtResource("3_1nvli")
+region = Rect2(790, 0, 790, 936)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gn7hm"]
+atlas = ExtResource("3_1nvli")
+region = Rect2(1580, 0, 790, 936)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xkhwa"]
+atlas = ExtResource("3_1nvli")
+region = Rect2(2370, 0, 790, 936)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbmfa"]
+atlas = ExtResource("3_1nvli")
+region = Rect2(0, 0, 790, 936)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hp1nw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1hnif")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gn7hm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xkhwa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rbmfa")
+}],
+"loop": false,
+"name": &"spring",
+"speed": 0.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_40rbg"]
+atlas = ExtResource("4_vals0")
+region = Rect2(296, 0, 296, 478)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kyorb"]
+atlas = ExtResource("4_vals0")
+region = Rect2(592, 0, 296, 478)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s4yv8"]
+atlas = ExtResource("4_vals0")
+region = Rect2(0, 0, 296, 478)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_odbip"]
+atlas = ExtResource("4_vals0")
+region = Rect2(888, 0, 296, 478)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kgrva"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_40rbg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kyorb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s4yv8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_odbip")
+}],
+"loop": false,
+"name": &"default",
+"speed": 0.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1hnif"]
+size = Vector2(12053.25, 797)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gn7hm"]
+size = Vector2(1130.5, 16742)
+
+[node name="springLevel" type="Node2D"]
+script = ExtResource("1_ry65h")
+
+[node name="BackgroundImage" type="AnimatedSprite2D" parent="."]
+position = Vector2(141, 0)
+scale = Vector2(3.0734375, 3)
+sprite_frames = SubResource("SpriteFrames_40rbg")
+animation = &"spring"
+
+[node name="HomeTree" type="AnimatedSprite2D" parent="."]
+position = Vector2(-4600, 0)
+scale = Vector2(3.5, 3.5)
+sprite_frames = SubResource("SpriteFrames_hp1nw")
+animation = &"spring"
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="tree" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(-1448, 709)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_kgrva")
+
+[node name="tree2" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(2059, 699)
+scale = Vector2(-3, 3)
+sprite_frames = SubResource("SpriteFrames_kgrva")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("5_oem7y")]
+position = Vector2(-4418, -633)
+
+[node name="daFloor" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="daFloor"]
+position = Vector2(8.375, 1979)
+shape = SubResource("RectangleShape2D_1hnif")
+
+[node name="leftCollision" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="leftCollision"]
+position = Vector2(-6510.25, -6737)
+shape = SubResource("RectangleShape2D_gn7hm")
