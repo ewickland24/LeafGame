@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjmlcmqaqiyvw"]
+
+[ext_resource type="Script" uid="uid://crf2le5jh1su7" path="res://scenes/twig_cursor.gd" id="1_qebiu"]
+
+[node name="twigCursor" type="Node"]
+script = ExtResource("1_qebiu")
