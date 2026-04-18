@@ -10,7 +10,7 @@ func _ready() -> void:
 	level = get_index()
 	is_unlocked = level <= GlobalLevelManager.level_unlocked
 	if !is_unlocked:
-		icon = preload("res://assets/sprites/AcornLock.png")
+		icon = preload("res://assets/sprites/Icon-Lock.png")
 
 func _on_pressed() -> void:
 	if is_unlocked:

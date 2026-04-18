@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkxyal2qkuhqg"
-path="res://.godot/imported/AcornLock.png-e9ddd94082a6ed9041ef91cbfa6859ec.ctex"
+uid="uid://dq8lmhhva41og"
+path="res://.godot/imported/Icon-Lock.png-97952d264801f461505446a751778291.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/AcornLock.png"
-dest_files=["res://.godot/imported/AcornLock.png-e9ddd94082a6ed9041ef91cbfa6859ec.ctex"]
+source_file="res://assets/sprites/Icon-Lock.png"
+dest_files=["res://.godot/imported/Icon-Lock.png-97952d264801f461505446a751778291.ctex"]
 
 [params]
 
