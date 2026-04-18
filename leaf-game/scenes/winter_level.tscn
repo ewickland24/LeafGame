@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://bl28dk1q205ex"]
+[gd_scene load_steps=2 format=3 uid="uid://e27cpde4py76"]
 
-[ext_resource type="Texture2D" path="res://assets/backgrounds/Level-Winter.png" id="1_36hwf"]
+[ext_resource type="Texture2D" uid="uid://ct2iygfkyri0b" path="res://assets/backgrounds/Level-Winter.png" id="1_36hwf"]
 
 [node name="winter_level" type="Node2D"]
 

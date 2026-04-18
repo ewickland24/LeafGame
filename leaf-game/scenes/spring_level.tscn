@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://poiiu3g6risk"]
+[gd_scene load_steps=2 format=3 uid="uid://wwycn3d1oxxd"]
 
-[ext_resource type="Texture2D" path="res://assets/backgrounds/Level-Spring.png" id="1_d3k7w"]
+[ext_resource type="Texture2D" uid="uid://bg4rwuchtkmjg" path="res://assets/backgrounds/Level-Spring.png" id="1_d3k7w"]
 
 [node name="springLevel" type="Node2D"]
 
