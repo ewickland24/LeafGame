@@ -23,7 +23,7 @@ script = ExtResource("1_gs0hc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5707964
-scale = Vector2(10, 4)
+scale = Vector2(4, 4)
 shape = SubResource("CapsuleShape2D_1v5px")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D"]
