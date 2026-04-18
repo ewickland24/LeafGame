@@ -9,8 +9,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if (daLeaf.position.x >= 6000):
+#	if (daLeaf.position.x >= 6000):
 		print("i wins")
 	
-	if (daLeaf.is_on_floor() == true):
+#	if (daLeaf.is_on_floor() == true):
 		print("oh no!")

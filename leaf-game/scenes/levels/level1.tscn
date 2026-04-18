@@ -1,9 +1,12 @@
-[gd_scene load_steps=13 format=3 uid="uid://bgtq7b67cdn3p"]
+[gd_scene load_steps=24 format=3 uid="uid://bgtq7b67cdn3p"]
 
 [ext_resource type="Script" uid="uid://blevlvdfiktgu" path="res://scripts/levelScript.gd" id="1_bfxgj"]
 [ext_resource type="Texture2D" uid="uid://bfpr32upa15p3" path="res://assets/backgrounds/Level-Summer.png" id="2_dywbp"]
 [ext_resource type="Texture2D" uid="uid://bqfdpioiqei8v" path="res://assets/sprites/Home.png" id="3_1seuy"]
+[ext_resource type="Texture2D" uid="uid://c7b6jrgswu5uf" path="res://assets/sprites/Tree.png" id="4_1seuy"]
 [ext_resource type="PackedScene" uid="uid://b54iwlmrg3gd8" path="res://scenes/daLeafCharacter.tscn" id="4_2r1tl"]
+[ext_resource type="Texture2D" uid="uid://c2msdyb7m30j2" path="res://assets/sprites/Bush.png" id="5_2r1tl"]
+[ext_resource type="Texture2D" uid="uid://cqi7581wcjc05" path="res://assets/sprites/Clood.png" id="6_2r1tl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k4mdp"]
 atlas = ExtResource("2_dywbp")
@@ -49,6 +52,64 @@ animations = [{
 "speed": 0.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_kyorb"]
+atlas = ExtResource("4_1seuy")
+region = Rect2(592, 0, 296, 478)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s4yv8"]
+atlas = ExtResource("4_1seuy")
+region = Rect2(0, 0, 296, 478)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_odbip"]
+atlas = ExtResource("4_1seuy")
+region = Rect2(888, 0, 296, 478)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8a7m2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kyorb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s4yv8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_odbip")
+}],
+"loop": false,
+"name": &"default",
+"speed": 0.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vals0"]
+atlas = ExtResource("5_2r1tl")
+region = Rect2(404, 0, 202, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oem7y"]
+atlas = ExtResource("5_2r1tl")
+region = Rect2(0, 0, 202, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a76di"]
+atlas = ExtResource("5_2r1tl")
+region = Rect2(606, 0, 202, 153)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_plydf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vals0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oem7y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a76di")
+}],
+"loop": false,
+"name": &"default",
+"speed": 0.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j1tua"]
 size = Vector2(12053.25, 797)
 
@@ -69,6 +130,68 @@ position = Vector2(-4600, 0)
 scale = Vector2(3.5, 3.5)
 sprite_frames = SubResource("SpriteFrames_uiijv")
 animation = &"spring"
+
+[node name="Node2D2" type="Node2D" parent="."]
+
+[node name="tree" type="AnimatedSprite2D" parent="Node2D2"]
+position = Vector2(-1448, 709)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_8a7m2")
+
+[node name="tree2" type="AnimatedSprite2D" parent="Node2D2"]
+position = Vector2(2059, 699)
+scale = Vector2(-3, 3)
+sprite_frames = SubResource("SpriteFrames_8a7m2")
+
+[node name="bush" type="AnimatedSprite2D" parent="Node2D2"]
+position = Vector2(-4732, 1239)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_plydf")
+
+[node name="bush2" type="AnimatedSprite2D" parent="Node2D2"]
+position = Vector2(-2801, 1191)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_plydf")
+
+[node name="bush3" type="AnimatedSprite2D" parent="Node2D2"]
+position = Vector2(-298, 1179)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_plydf")
+
+[node name="bush4" type="AnimatedSprite2D" parent="Node2D2"]
+position = Vector2(1680, 1203)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_plydf")
+
+[node name="bush5" type="AnimatedSprite2D" parent="Node2D2"]
+position = Vector2(3694, 1239)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_plydf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D2"]
+position = Vector2(-2917, -714)
+scale = Vector2(3.6850455, 3.3552625)
+texture = ExtResource("6_2r1tl")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D2"]
+position = Vector2(-1105.9999, -1218)
+scale = Vector2(2.9602711, 3.2698429)
+texture = ExtResource("6_2r1tl")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node2D2"]
+position = Vector2(2231.9998, -842.0001)
+scale = Vector2(2.0322695, 2.2420082)
+texture = ExtResource("6_2r1tl")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Node2D2"]
+position = Vector2(878.99963, -1449)
+scale = Vector2(4.786436, 5.563984)
+texture = ExtResource("6_2r1tl")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Node2D2"]
+position = Vector2(4404.0005, -1031.9999)
+scale = Vector2(4.1301193, 5.026601)
+texture = ExtResource("6_2r1tl")
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("4_2r1tl")]
 position = Vector2(-4418, -633)

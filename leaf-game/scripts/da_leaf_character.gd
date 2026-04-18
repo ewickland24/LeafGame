@@ -1,4 +1,20 @@
 extends CharacterBody2D
+@onready var leafAnimate = $CollisionShape2D/AnimatedSprite2D
+
+@onready var breeze_bar = $"../Camera2D/breezeBar"
+@onready var draft_1 = $"../Camera2D/draft1"
+@onready var draft_2 = $"../Camera2D/draft2"
+@onready var draft_3 = $"../Camera2D/draft3"
+
+@onready var camera_2d = $"../Camera2D"
+
+@onready var breezeBox = $"../Camera2D/BreezeBox"
+
+
+
+var daDrafts
+var draftNum : int = 3
+var totalBreeze = 10.0
 
 var gravityTax := 2
 var rotation_speed := 2.2
@@ -10,7 +26,19 @@ var leafFlow : float = 0.0
 var inputSettings : int = 1
 var gameOver : bool = false
 
+var enviornment : int = 0
+
+func _ready():
+	daDrafts = [draft_1, draft_2, draft_3]
+	
+	# use global level manager
+
 func _physics_process(delta):
+	
+	# make camera with elements follow
+	camera_2d.position.x = min(7500, max(1000, position.x))
+	camera_2d.position.y = max( 120, min(1100, position.y))
+	
 	
 	# swap from keys to mouse controlls
 	if Input.is_action_just_pressed("ui_accept"):
@@ -32,16 +60,22 @@ func _physics_process(delta):
 	magnitude = max(-Y_MAX_SPEED, min(Y_MAX_SPEED, magnitude))
 	
 	# allowing players to use breeze
-	if (Input.is_action_pressed("breeze")):
+	if (Input.is_action_pressed("breeze") && totalBreeze > 0 && rotation != 0.0):
+		totalBreeze -= 0.1
+		breezeBox.scale.x = totalBreeze
+		breezeBox.position.x -= 6
 		velocity.x += 3 * cos(rotation)
 		velocity.y -= 10.0 * abs(sin(rotation))
 		loft -= 0.05
 	
-	if (Input.is_action_just_pressed("upDraft")):
+	if (Input.is_action_just_pressed("upDraft") && draftNum > 0 && rotation != 0.0):
+		draftNum -= 1
+		daDrafts[draftNum].visible = false
 		loft = 0.0
 		magnitude = 0.0
-		velocity.y = min(-600, velocity.y)
-		velocity.y -= 600
+		velocity.y = min(-400, velocity.y)
+		velocity.y -= 400
+		loadingLeaf(0)
 	
 	#make the player travel with less momentum the longer they look up
 	if (sign(magnitude) == -1):
@@ -75,6 +109,10 @@ func _physics_process(delta):
 		velocity.y = 0
 		velocity.x = 0
 	
-	
 	# --- Move ---
 	move_and_slide()
+
+
+func loadingLeaf(numba):
+	enviornment = numba
+	leafAnimate.play("leaf"+str(numba))

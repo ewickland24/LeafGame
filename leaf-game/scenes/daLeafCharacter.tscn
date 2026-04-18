@@ -1,7 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://b54iwlmrg3gd8"]
+[gd_scene load_steps=15 format=3 uid="uid://b54iwlmrg3gd8"]
 
 [ext_resource type="Script" uid="uid://clqr5hxi0lrk8" path="res://scripts/da_leaf_character.gd" id="1_gs0hc"]
 [ext_resource type="Texture2D" uid="uid://h02okjq1h1st" path="res://assets/sprites/LeafChar.png" id="2_gs0hc"]
+[ext_resource type="Texture2D" uid="uid://bc2vg10giv5dl" path="res://assets/sprites/BreezeBox.png" id="3_hhnnx"]
+[ext_resource type="Texture2D" uid="uid://boabaqrbu64u" path="res://assets/sprites/Breeze.png" id="3_hjfg7"]
+[ext_resource type="Texture2D" uid="uid://bc8leiao8ehmf" path="res://assets/sprites/Updraft.png" id="4_fpd4g"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1v5px"]
 radius = 33.999996
@@ -70,24 +73,68 @@ animations = [{
 "speed": 0.0
 }]
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_kqe7v"]
+atlas = ExtResource("4_fpd4g")
+region = Rect2(1, 1, 60, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vb1el"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kqe7v")
+}],
+"loop": false,
+"name": &"default",
+"speed": 0.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 scale = Vector2(0.33, 0.33)
 script = ExtResource("1_gs0hc")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 rotation = 1.5707964
 scale = Vector2(5, 5)
 shape = SubResource("CapsuleShape2D_1v5px")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D/CollisionShape2D"]
 position = Vector2(-8.400002, 0)
 rotation = -2.1816616
 sprite_frames = SubResource("SpriteFrames_gs0hc")
 animation = &"leaf4"
 
 [node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(0.33, 0.33)
 zoom = Vector2(0.3, 0.3)
 limit_left = -5950
 limit_top = -1600
 limit_right = 5950
 limit_bottom = 1600
+
+[node name="BreezeBox" type="Sprite2D" parent="Camera2D"]
+modulate = Color(1, 0, 1, 1)
+position = Vector2(-5004.697, 2845.454)
+scale = Vector2(9.997558, 10)
+texture = ExtResource("3_hhnnx")
+
+[node name="breezeBar" type="Sprite2D" parent="Camera2D"]
+position = Vector2(-5000, 2766.666)
+scale = Vector2(10, 10)
+texture = ExtResource("3_hjfg7")
+
+[node name="draft1" type="AnimatedSprite2D" parent="Camera2D"]
+position = Vector2(-4000, 3000)
+scale = Vector2(7, 7)
+sprite_frames = SubResource("SpriteFrames_vb1el")
+
+[node name="draft2" type="AnimatedSprite2D" parent="Camera2D"]
+position = Vector2(-3500, 3000)
+scale = Vector2(7, 7)
+sprite_frames = SubResource("SpriteFrames_vb1el")
+
+[node name="draft3" type="AnimatedSprite2D" parent="Camera2D"]
+position = Vector2(-3000, 3000)
+scale = Vector2(7, 7)
+sprite_frames = SubResource("SpriteFrames_vb1el")
