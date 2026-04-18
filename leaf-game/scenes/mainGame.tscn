@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://3fjpmlygo14h"]
+[gd_scene load_steps=6 format=3 uid="uid://3fjpmlygo14h"]
 
-[ext_resource type="Texture2D" uid="uid://bcyij48jjm3f7" path="res://assets/sprites/icon.svg" id="1_mw4qg"]
+[ext_resource type="Texture2D" uid="uid://bcyij48jjm3f7" path="res://assets/sprites/icon.svg" id="2_iuu36"]
 [ext_resource type="PackedScene" uid="uid://b54iwlmrg3gd8" path="res://scenes/daLeafCharacter.tscn" id="2_mmojm"]
+[ext_resource type="PackedScene" uid="uid://dggwy7x3xx8j2" path="res://scenes/pause_menu.tscn" id="3_gb8pf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mmojm"]
 size = Vector2(30.800001, 125)
@@ -10,7 +11,7 @@ size = Vector2(30.800001, 125)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_mw4qg")
+"texture": ExtResource("2_iuu36")
 }],
 "loop": true,
 "name": &"default",
@@ -33,3 +34,7 @@ shape = SubResource("RectangleShape2D_mmojm")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D/CollisionShape2D"]
 scale = Vector2(0.25, 1)
 sprite_frames = SubResource("SpriteFrames_iuu36")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="pauseMenu" parent="CanvasLayer" instance=ExtResource("3_gb8pf")]

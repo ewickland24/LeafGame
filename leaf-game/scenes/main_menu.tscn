@@ -84,4 +84,4 @@ theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ekxnf")
 theme_override_styles/hover = SubResource("StyleBoxFlat_l6cm7")
-text = "start"
+text = "start falling"
