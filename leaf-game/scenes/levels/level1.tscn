@@ -193,7 +193,7 @@ position = Vector2(4404.0005, -1031.9999)
 scale = Vector2(4.1301193, 5.026601)
 texture = ExtResource("6_2r1tl")
 
-[node name="CharacterBody2D2" parent="." instance=ExtResource("4_2r1tl")]
+[node name="CharacterBody2D" parent="." instance=ExtResource("4_2r1tl")]
 position = Vector2(-4418, -633)
 
 [node name="daFloor2" type="StaticBody2D" parent="."]

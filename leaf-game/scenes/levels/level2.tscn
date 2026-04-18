@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://se43w1u1l6wk"]
+[gd_scene load_steps=21 format=3 uid="uid://se43w1u1l6wk"]
 
 [ext_resource type="Script" uid="uid://blevlvdfiktgu" path="res://scripts/levelScript.gd" id="1_niitk"]
 [ext_resource type="Texture2D" uid="uid://etykyanrtx1j" path="res://assets/backgrounds/Level-Autumn.png" id="2_d5djh"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c7b6jrgswu5uf" path="res://assets/sprites/Tree.png" id="4_ok6xr"]
 [ext_resource type="Texture2D" uid="uid://c2msdyb7m30j2" path="res://assets/sprites/Bush.png" id="5_dj4wq"]
 [ext_resource type="Texture2D" uid="uid://cqi7581wcjc05" path="res://assets/sprites/Clood.png" id="6_dj4wq"]
+[ext_resource type="Texture2D" uid="uid://y7mfcexdnijh" path="res://assets/sprites/lilguy.png" id="8_k0mew"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xnbtp"]
 atlas = ExtResource("2_d5djh")
@@ -160,7 +161,7 @@ position = Vector2(3785.9995, -811.0001)
 scale = Vector2(4.1301193, 5.026601)
 texture = ExtResource("6_dj4wq")
 
-[node name="CharacterBody2D4" parent="." instance=ExtResource("4_dj4wq")]
+[node name="CharacterBody2D" parent="." instance=ExtResource("4_dj4wq")]
 position = Vector2(-4418, -633)
 
 [node name="daFloor4" type="StaticBody2D" parent="."]
@@ -174,3 +175,8 @@ shape = SubResource("RectangleShape2D_57qtm")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tree4"]
 position = Vector2(-6510.25, -6737)
 shape = SubResource("RectangleShape2D_n5xtu")
+
+[node name="Lilguy" type="Sprite2D" parent="."]
+position = Vector2(3100, 1160)
+scale = Vector2(3, 3)
+texture = ExtResource("8_k0mew")
