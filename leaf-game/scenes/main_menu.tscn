@@ -1,0 +1,71 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxtvlqqsd1gla"]
+
+[ext_resource type="FontFile" uid="uid://u3tjmtmiqcqo" path="res://assets/fonts/green_leaf/Green Leaf.otf" id="1_l6cm7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ekxnf"]
+bg_color = Color(0.35557458, 0.4882195, 0.28091556, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vue75"]
+bg_color = Color(0.47612, 0.2903492, 0.13198617, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.99560755, 0.74234235, 0.49763602, 1)
+border_blend = true
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l6cm7"]
+bg_color = Color(0.44565427, 0.27112207, 0.122458674, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.83137256, 0.5764706, 0.37254903, 1)
+border_blend = true
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[node name="mainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1155.0
+offset_bottom = 647.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ekxnf")
+
+[node name="startButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 457.0
+offset_top = 315.0
+offset_right = 722.0
+offset_bottom = 360.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_l6cm7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l6cm7")
+text = "start"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 399.0
+offset_top = 175.0
+offset_right = 779.0
+offset_bottom = 275.0
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 120
+text = "Leaf Game"
+horizontal_alignment = 1
+vertical_alignment = 1
