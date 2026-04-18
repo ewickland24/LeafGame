@@ -16,7 +16,7 @@ var daDrafts
 var draftNum : int = 3
 var totalBreeze = 10.0
 
-var gravityTax := 2
+var gravityTax : float = 2
 var Y_MAX_SPEED := 800
 var X_MAX_SPEED := 1200
 var loftTax := 0.03
@@ -115,11 +115,19 @@ func _physics_process(delta):
 	move_and_slide()
 
 
-func loadingLeaf(numba):
+func loadingLeaf(numba, golden):
 	enviornment = numba
 	leafAnimate.play("leaf"+str(numba))
-	
-	if(enviornment == 0):
+	if (golden > 3):
+		leafAnimate.play("leaf4")
+		draftNum = 3
+		totalBreeze = 15.0
+		gravityTax = 2
+		Y_MAX_SPEED = 1000
+		X_MAX_SPEED = 10000
+		loftTax = 0.02
+		enviornment = 1
+	elif(enviornment == 0):
 		draftNum = 3
 		totalBreeze = 20.0
 		maxBreeze = 20.0
@@ -148,19 +156,12 @@ func loadingLeaf(numba):
 		daDrafts[1].visible = false
 	elif(enviornment == 3):
 		draftNum = 0
-		totalBreeze = 7.0
-		maxBreeze = 7.0
+		totalBreeze = 5.0
+		maxBreeze = 5.0
 		gravityTax = 2
 		Y_MAX_SPEED = 800
 		X_MAX_SPEED = 1200
-		loftTax = 0.06
+		loftTax = 0.03
 		daDrafts[2].visible = false
 		daDrafts[1].visible = false
 		daDrafts[0].visible = false
-	else:
-		draftNum = 3
-		totalBreeze = 10.0
-		gravityTax = 2
-		Y_MAX_SPEED = 10000
-		X_MAX_SPEED = 10000
-		loftTax = 0.03
