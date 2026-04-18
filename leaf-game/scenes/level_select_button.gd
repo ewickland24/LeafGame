@@ -6,12 +6,13 @@ var is_unlocked: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	self.pressed.connect(_on_pressed)
 	level = get_index()
 	is_unlocked = level <= GlobalLevelManager.level_unlocked
 	if !is_unlocked:
 		icon = preload("res://assets/sprites/AcornLock.png")
 
-func _pressed() -> void:
+func _on_pressed() -> void:
 	if is_unlocked:
 		GlobalLevelManager.current_level = level
 		get_tree().call_deferred("change_scene_to_file", GlobalLevelManager.load_level(level))

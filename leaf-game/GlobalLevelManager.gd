@@ -11,10 +11,9 @@ func unlock_level(level_to_unlock: int) -> void:
 func load_level(level_to_load: int) -> String:
 	if level_to_load > max_level:
 		return ""
-	return str("res://scenes/level", level_to_load, ".tscn")
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+	# Use %d to slide the number directly into the string with no spaces
+	var path = "res://scenes/levels/level%d.tscn" % level_to_load
+	return path
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

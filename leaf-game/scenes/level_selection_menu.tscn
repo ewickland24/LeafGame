@@ -36,28 +36,28 @@ layout_mode = 2
 theme_override_constants/h_separation = 0
 columns = 4
 
-[node name="level0SelectButton" parent="CenterContainer/GridContainer" instance=ExtResource("2_hlb6t")]
+[node name="l0b" parent="CenterContainer/GridContainer" instance=ExtResource("2_hlb6t")]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 icon = ExtResource("3_ahrjq")
 
-[node name="level1SelectButton" parent="CenterContainer/GridContainer" instance=ExtResource("2_hlb6t")]
+[node name="l1b" parent="CenterContainer/GridContainer" instance=ExtResource("2_hlb6t")]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 icon = ExtResource("4_5pvln")
 
-[node name="level2SelectButton" parent="CenterContainer/GridContainer" instance=ExtResource("2_hlb6t")]
+[node name="l2b" parent="CenterContainer/GridContainer" instance=ExtResource("2_hlb6t")]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 icon = ExtResource("5_xdblq")
 
-[node name="level3SelectButton" parent="CenterContainer/GridContainer" instance=ExtResource("2_hlb6t")]
+[node name="l3b" parent="CenterContainer/GridContainer" instance=ExtResource("2_hlb6t")]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 3
