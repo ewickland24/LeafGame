@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b67oyy0ht17dt"]
+
+[ext_resource type="Texture2D" path="res://assets/backgrounds/Level-Autumn.png" id="1_cv338"]
+
+[node name="autumn_level" type="Node2D"]
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(1896, 328)
+scale = Vector2(1, 0.6296297)
+texture = ExtResource("1_cv338")
