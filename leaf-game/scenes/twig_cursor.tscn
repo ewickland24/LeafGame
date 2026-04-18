@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://bjmlcmqaqiyvw"]
+
+[node name="twigCursor" type="AnimatedSprite2D"]

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://de6lpskjqhgu7"]
+
+[ext_resource type="Texture2D" path="res://assets/backgrounds/Level-Summer.png" id="1_grf2j"]
+
+[node name="summer_level" type="Node2D"]
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(1882.5001, 319)
+scale = Vector2(0.99140626, 0.6296296)
+texture = ExtResource("1_grf2j")
