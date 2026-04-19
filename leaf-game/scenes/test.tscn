@@ -1,15 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://dggwy7x3xx8j2"]
+[gd_scene load_steps=12 format=3 uid="uid://belth6co1k3ch"]
 
-[ext_resource type="Script" uid="uid://boghblesesy2j" path="res://scripts/pause_menu.gd" id="1_kukqi"]
-[ext_resource type="Shader" uid="uid://c426tkaqag14" path="res://scenes/pause_menu.gdshader" id="1_myx47"]
-[ext_resource type="FontFile" uid="uid://u3tjmtmiqcqo" path="res://assets/fonts/green_leaf/Green Leaf.otf" id="1_n87rw"]
-[ext_resource type="Texture2D" uid="uid://brlufuhqec2l8" path="res://assets/sprites/MapleFrame.png" id="4_5d2l8"]
+[ext_resource type="Shader" uid="uid://c426tkaqag14" path="res://scenes/pause_menu.gdshader" id="2_j5jx5"]
+[ext_resource type="FontFile" uid="uid://u3tjmtmiqcqo" path="res://assets/fonts/green_leaf/Green Leaf.otf" id="3_lpvoh"]
+[ext_resource type="Texture2D" uid="uid://brlufuhqec2l8" path="res://assets/sprites/MapleFrame.png" id="4_at5dv"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_kukqi"]
-shader = ExtResource("1_myx47")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jcd4p"]
+shader = ExtResource("2_j5jx5")
 shader_parameter/lod = 0.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kukqi"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uacia"]
 content_margin_left = 20.0
 content_margin_right = 20.0
 bg_color = Color(0.1764706, 0.08627451, 0.015686275, 0.76862746)
@@ -18,7 +17,7 @@ corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n87rw"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yk7ts"]
 bg_color = Color(0.47612, 0.2903492, 0.13198617, 1)
 border_width_left = 4
 border_width_top = 4
@@ -31,7 +30,7 @@ corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5d2l8"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ajshl"]
 bg_color = Color(0.3916001, 0.23556149, 0.10248185, 1)
 border_width_left = 2
 border_width_top = 2
@@ -44,7 +43,7 @@ corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_myx47"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ghpyy"]
 bg_color = Color(0.44565427, 0.27112207, 0.122458674, 1)
 border_width_left = 2
 border_width_top = 2
@@ -180,31 +179,32 @@ _data = {
 &"blur": SubResource("Animation_myx47")
 }
 
-[node name="CanvasLayer" type="CanvasLayer"]
-layer = 100
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 20.0
+offset_right = 206.0
+offset_bottom = 248.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="pauseMenu" type="Control" parent="."]
 process_mode = 3
 z_index = 5
-layout_mode = 3
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-script = ExtResource("1_kukqi")
 
 [node name="ColorRect" type="ColorRect" parent="pauseMenu"]
-material = SubResource("ShaderMaterial_kukqi")
+material = SubResource("ShaderMaterial_jcd4p")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 5.0
-offset_top = -6.0
-offset_right = 5.0
-offset_bottom = -6.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -225,7 +225,7 @@ offset_bottom = 124.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_kukqi")
+theme_override_styles/panel = SubResource("StyleBoxFlat_uacia")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="pauseMenu/PanelContainer"]
 layout_mode = 2
@@ -236,45 +236,45 @@ alignment = 1
 layout_mode = 2
 focus_mode = 0
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("1_n87rw")
+theme_override_fonts/font = ExtResource("3_lpvoh")
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_n87rw")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_5d2l8")
-theme_override_styles/hover = SubResource("StyleBoxFlat_myx47")
+theme_override_styles/normal = SubResource("StyleBoxFlat_yk7ts")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ajshl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ghpyy")
 text = "resume"
 
 [node name="restartButton" type="Button" parent="pauseMenu/PanelContainer/VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("1_n87rw")
+theme_override_fonts/font = ExtResource("3_lpvoh")
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_n87rw")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_myx47")
-theme_override_styles/hover = SubResource("StyleBoxFlat_myx47")
+theme_override_styles/normal = SubResource("StyleBoxFlat_yk7ts")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ghpyy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ghpyy")
 text = "restart"
 
 [node name="quitButton" type="Button" parent="pauseMenu/PanelContainer/VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("1_n87rw")
+theme_override_fonts/font = ExtResource("3_lpvoh")
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_n87rw")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_myx47")
-theme_override_styles/hover = SubResource("StyleBoxFlat_myx47")
+theme_override_styles/normal = SubResource("StyleBoxFlat_yk7ts")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ghpyy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ghpyy")
 text = "Quit"
 
 [node name="MapleFrame" type="Sprite2D" parent="pauseMenu/PanelContainer/VBoxContainer"]
 position = Vector2(0, 231)
 scale = Vector2(0.3445946, 0.34445378)
-texture = ExtResource("4_5d2l8")
+texture = ExtResource("4_at5dv")
 
 [node name="MapleFrame2" type="Sprite2D" parent="pauseMenu/PanelContainer/VBoxContainer"]
 position = Vector2(187, 18.00003)
 rotation = 3.1415927
 scale = Vector2(0.3445946, 0.34445378)
-texture = ExtResource("4_5d2l8")
+texture = ExtResource("4_at5dv")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="pauseMenu"]
 libraries = {

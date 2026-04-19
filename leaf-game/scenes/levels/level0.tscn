@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://c6fcafsawdn8t"]
+[gd_scene load_steps=28 format=3 uid="uid://c6fcafsawdn8t"]
 
 [ext_resource type="Script" uid="uid://blevlvdfiktgu" path="res://scripts/levelScript.gd" id="1_ry65h"]
 [ext_resource type="Texture2D" uid="uid://bg4rwuchtkmjg" path="res://assets/backgrounds/Level-Spring.png" id="2_d0grl"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c2msdyb7m30j2" path="res://assets/sprites/Bush.png" id="5_d0grl"]
 [ext_resource type="PackedScene" uid="uid://b54iwlmrg3gd8" path="res://scenes/daLeafCharacter.tscn" id="5_oem7y"]
 [ext_resource type="Texture2D" uid="uid://cqi7581wcjc05" path="res://assets/sprites/Clood.png" id="6_1nvli"]
+[ext_resource type="PackedScene" uid="uid://dggwy7x3xx8j2" path="res://scenes/pause_menu.tscn" id="8_vals0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hp1nw"]
 atlas = ExtResource("2_d0grl")
@@ -218,3 +219,7 @@ shape = SubResource("RectangleShape2D_1hnif")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="leftCollision"]
 position = Vector2(-6510.25, -6737)
 shape = SubResource("RectangleShape2D_gn7hm")
+
+[node name="CanvasLayer" parent="." instance=ExtResource("8_vals0")]
+
+[node name="Camera2D" type="Camera2D" parent="."]

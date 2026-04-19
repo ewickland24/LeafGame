@@ -1,33 +1,29 @@
 extends Control
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
+	# Ensures the menu is invisible and reset on startup
 	$AnimationPlayer.play("RESET")
-	
-func resume():
-	get_tree().paused = false
-	$AnimationPlayer.play_backwards("blur")
+	self.hide()
+	pass
 
 func pause():
-	get_tree().paused = true
+	# This is called by GlobalUI.toggle_pause()
+	self.show()
 	$AnimationPlayer.play("blur")
-	
-func test_escape():
-	if Input.is_action_just_pressed("escape") and !get_tree().paused:
-		pause()
-	elif Input.is_action_just_pressed("escape") and get_tree().paused:
-		resume() 
+
+func resume():
+	# This is called by GlobalUI.toggle_pause()
+	$AnimationPlayer.play_backwards("blur")
+	# We don't call hide() here because the animation usually 
+	# needs time to finish. GlobalUI will hide the CanvasLayer.
 
 func _on_resume_button_pressed() -> void:
-	resume()
+	# Talk to the boss to shut everything down correctly
+	GlobalUI.toggle_pause()
 
 func _on_restart_button_pressed() -> void:
-	resume()
+	GlobalUI.toggle_pause() 
 	get_tree().reload_current_scene()
 
 func _on_quit_button_pressed() -> void:
 	get_tree().quit()
-
-func _process(delta: float) -> void:
-	test_escape()
