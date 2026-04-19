@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://4rdi1vkrs0l0"]
 
-[ext_resource type="Script" uid="uid://dnb2y80n27t0f" path="res://scenes/main_menu.gd" id="1_bqqt6"]
+[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://b2boym03cgsdu" path="res://assets/backgrounds/LeafGame Menu.png" id="1_ekxnf"]
 [ext_resource type="FontFile" uid="uid://u3tjmtmiqcqo" path="res://assets/fonts/green_leaf/Green Leaf.otf" id="1_l6cm7"]
 

@@ -4,7 +4,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	daLeaf.loadingLeaf(GlobalLevelManager.current_level)
+	daLeaf.loadingLeaf(GlobalLevelManager.current_level, GlobalLevelManager.level_unlocked)
 	pass # Replace with function body.
 
 
